@@ -1,3 +1,25 @@
-.aov-incentive {
-  color: navajowhite;
+.aov-container {
+  width: 100%;
+  display: flex;
+}
+
+.incentive-container {
+  background-color: #4b5c6b;
+  color: #fff;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.incentive-container span {
+  font-weight: bold;
+}
+
+.incentive-missing {
+  background-color: #d8dee3;
+  color: #000000;
+  font-weight: bold;
+  padding: 0.3rem;
+  display: flex;
+  justify-content: center;
 }
