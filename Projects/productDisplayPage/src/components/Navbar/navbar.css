@@ -1,3 +1,29 @@
 .navbar {
-  color: wheat;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  color: #788896;
+}
+
+.company-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.navbar__link-container {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar__icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.navbar__icon-container a,
+li a {
+  text-decoration: underline;
+  color: #788896;
 }

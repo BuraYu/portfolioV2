@@ -33,7 +33,6 @@ const Navbar = () => {
               stroke-linejoin="round"
             />
           </svg>{" "}
-          <button></button>
           <a href="#">Wishlist</a>
         </li>
         <li className="navbar__icon-container">
