@@ -1,7 +1,7 @@
 import "./aovIncetive.css";
 
 const AOVIncetive = () => {
-  let freeShipping = 60;
+  let freeShipping = 190;
   let freeShippingTarget = 200;
   let missingAmount = freeShippingTarget - freeShipping;
   let percentageReached = (freeShipping / freeShippingTarget) * 100 > 20;

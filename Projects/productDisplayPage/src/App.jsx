@@ -1,6 +1,5 @@
 import "./App.css";
 import AOVIncetive from "./components/AOVIncentive/AOVIncetive";
-import Breadcrumbs from "./components/Breadcrumbs/Breadcrumbs";
 import CrossSell from "./components/CrossSell/CrossSell";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
@@ -15,7 +14,6 @@ function App() {
     <>
       <Navbar />
       <AOVIncetive />
-      <Breadcrumbs />
       <Product />
       <ProductInfo />
       <Reviews />

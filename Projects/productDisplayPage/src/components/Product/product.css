@@ -1,3 +1,141 @@
-.product {
-  color: pink;
+.product-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.product-container {
+  width: 80%;
+  background-color: #ececec;
+  padding: 20px;
+}
+
+.breadcrumb {
+  display: flex;
+  gap: 10px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #788896;
+}
+
+.breadcrumb a:last-child {
+  text-decoration: underline;
+  color: #788896;
+}
+
+.breadcrumb span {
+  color: #788896;
+}
+
+.product__content-container {
+  margin-top: 20px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.left {
+  width: 50%;
+}
+
+.right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #293845;
+}
+
+.product__images {
+}
+
+.product__thumbnail-container {
+  display: flex;
+  max-width: 500px;
+  justify-content: space-around;
+  gap: 1.5rem;
+  margin-top: 20px;
+}
+
+.product__reviews {
+  display: flex;
+  gap: 2px;
+}
+
+.product__reviews a {
+  text-decoration: underline;
+  color: #6558f5;
+}
+
+.product__old-price {
+  text-decoration: line-through;
+}
+
+.product__price {
+  color: #788896;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.percentage-off {
+  color: #6558f5;
+  font-weight: 600;
+}
+
+.product__price h2 {
+  color: #293845;
+  margin-left: 10px;
+}
+
+.product__size-selector {
+  display: flex;
+  flex-direction: column;
+}
+
+.product__size-selector span {
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.custom-select {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  background-color: #f3f3f3;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  padding-right: 30px;
+  position: relative;
+}
+
+.custom-select::after {
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.custom-select:hover {
+  background-color: #e0e0e0;
+}
+
+.custom-select:focus {
+  border-color: #007bff;
+}
+
+.custom-select option {
+  background-color: #fff;
+  color: #333;
 }
