@@ -1,6 +1,11 @@
 import "./product.css";
 import fullStar from "../../assets/fullStar.svg";
 import emptyStar from "../../assets/emptyStar.svg";
+import measure from "../../assets/measure.svg";
+import amex from "../../assets/payment/amex.svg";
+import mastercard from "../../assets/payment/mastercard.svg";
+import paypal from "../../assets/payment/paypal.svg";
+import visa from "../../assets/payment/visa.svg";
 
 const Product = () => {
   let home = "Home";
@@ -45,9 +50,9 @@ const Product = () => {
               <h2>$155.40</h2>
             </div>
             <span>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis
-              facere quisquam illo, quos placeat vel totam saepe inventore
-              cupiditate quaerat?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+              totam adipisci necessitatibus alias officia corrupti qui.
+        
             </span>
             <div className="product__size-selector">
               <span>Choose size</span>
@@ -57,29 +62,31 @@ const Product = () => {
               </select>
 
               <div className="product__size-guide">
-                <span>icon</span>
-                <span>Size guide</span>
+                <img src={measure} alt="" />
+                <a href="#">
+                  <span>Size guide</span>
+                </a>
               </div>
             </div>
 
-            <div className="product__chose-color">
+            <div className="product__choose-color">
               <span>Choose Color</span>
               <div className="product__color-options">
-                <div className="color-1"></div>
-                <div className="color-2"></div>
-                <div className="color-3"></div>
-                <div className="color-4"></div>
+                <div className="circle color-1"></div>
+                <div className="circle color-2"></div>
+                <div className="circle color-3"></div>
+                <div className="circle color-4"></div>
               </div>
             </div>
-            <span>Add to cart</span>
+            <span className="product__to-cart">Add to cart</span>
             <div className="product__checkout">
               <span>Checkout safety</span>
-              <div className="vertical-line"></div>
+              <div className="line"></div>
               <div className="product__payment-methods">
-                <span>icon 1</span>
-                <span>icon 2</span>
-                <span>icon 3</span>
-                <span>icon 4</span>
+                <img src={paypal} alt="" />
+                <img src={visa} alt="" />
+                <img src={mastercard} alt="" />
+                <img src={amex} alt="" />
               </div>
             </div>
           </div>
