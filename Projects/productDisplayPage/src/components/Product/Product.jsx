@@ -15,21 +15,33 @@ const Product = () => {
   return (
     <div className="product-wrapper">
       <div className="product-container">
-        <div className="breadcrumb">
-          <a href="#">{home}</a>
-          <span>&gt;</span>
-          <a href="#">{category}</a>
-          <span>&gt;</span>
-          <a href="#">{productPage}</a>
-        </div>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li>
+              <a href="#">{home}</a>
+            </li>
+            <li>
+              <span>&gt;</span>
+            </li>
+            <li>
+              <a href="#">{category}</a>
+            </li>
+            <li>
+              <span>&gt;</span>
+            </li>
+            <li>
+              <a href="#">{productPage}</a>
+            </li>
+          </ol>
+        </nav>
 
         <div className="product__content-container">
           <div className="product__images">
             <img src="https://picsum.photos/500" alt="" />
             <div className="product__thumbnail-container">
-              <img src="https://picsum.photos/150/110" alt="" />
-              <img src="https://picsum.photos/150/110" alt="" />
-              <img src="https://picsum.photos/150/110" alt="" />
+              <img src="https://picsum.photos/150/115" alt="" />
+              <img src="https://picsum.photos/150/115" alt="" />
+              <img src="https://picsum.photos/150/115" alt="" />
             </div>
           </div>
           <div className="right">
@@ -52,7 +64,6 @@ const Product = () => {
             <span>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
               totam adipisci necessitatibus alias officia corrupti qui.
-        
             </span>
             <div className="product__size-selector">
               <span>Choose size</span>
