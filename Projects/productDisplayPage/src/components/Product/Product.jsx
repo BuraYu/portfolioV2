@@ -75,7 +75,7 @@ const Product = () => {
               totam adipisci necessitatibus alias officia corrupti qui.
             </span>
             <div className="product__size-selector">
-              <span>Choose size</span>
+              <label for="size-selector">Choose size</label>
               <select class="custom-select">
                 <option value="someOption">Some option</option>
                 <option value="otherOption">Other option</option>

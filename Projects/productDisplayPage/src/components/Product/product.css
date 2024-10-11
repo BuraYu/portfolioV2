@@ -99,7 +99,7 @@
   flex-direction: column;
 }
 
-.product__size-selector span {
+.product__size-selector label {
   font-size: 0.7rem;
   font-weight: 900;
 }
