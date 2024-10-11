@@ -37,22 +37,31 @@ const Product = () => {
 
         <div className="product__content-container">
           <div className="product__images">
-            <img src="https://picsum.photos/500" alt="" />
+            <img src="https://picsum.photos/500" alt="A random 500px picture" />
             <div className="product__thumbnail-container">
-              <img src="https://picsum.photos/150/115" alt="" />
-              <img src="https://picsum.photos/150/115" alt="" />
-              <img src="https://picsum.photos/150/115" alt="" />
+              <img
+                src="https://picsum.photos/150/115"
+                alt="a random 150x115 pictre"
+              />
+              <img
+                src="https://picsum.photos/150/115"
+                alt="a random 150x115 pictre"
+              />
+              <img
+                src="https://picsum.photos/150/115"
+                alt="a random 150x115 pictre"
+              />
             </div>
           </div>
           <div className="right">
             <h1>Product name</h1>
             <div className="product__reviews">
               {/* Change to numbers at top, to iterate over them */}
-              <img src={fullStar} alt="" />
-              <img src={fullStar} alt="" />
-              <img src={fullStar} alt="" />
-              <img src={fullStar} alt="" />
-              <img src={emptyStar} alt="" />
+              <img src={fullStar} alt="icon of a filled star" />
+              <img src={fullStar} alt="icon of a filled star" />
+              <img src={fullStar} alt="icon of a filled star" />
+              <img src={fullStar} alt="icon of a filled star" />
+              <img src={emptyStar} alt="icon of a empty star" />
               <a href="#">Read reviews</a>
             </div>
             <div className="product__price">
@@ -94,10 +103,10 @@ const Product = () => {
               <span>Checkout safety</span>
               <div className="line"></div>
               <div className="product__payment-methods">
-                <img src={paypal} alt="" />
-                <img src={visa} alt="" />
-                <img src={mastercard} alt="" />
-                <img src={amex} alt="" />
+                <img src={paypal} alt="paypal logo" />
+                <img src={visa} alt="visa logo" />
+                <img src={mastercard} alt="mastercard logo" />
+                <img src={amex} alt="amex logo" />
               </div>
             </div>
           </div>
