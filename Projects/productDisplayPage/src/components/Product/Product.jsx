@@ -63,7 +63,7 @@ const Product = () => {
               />
             </div>
           </div>
-          <div className="right">
+          <div className="product__rating">
             <h1>Product name</h1>
             <div className="product__reviews">
               {/* Change to numbers at top, to iterate over them */}
@@ -87,7 +87,7 @@ const Product = () => {
             </span>
             <div className="product__size-selector">
               <label for="size-selector">Choose size</label>
-              <select class="custom-select">
+              <select class="product__size-select">
                 <option value="someOption">Some option</option>
                 <option value="otherOption">Other option</option>
               </select>
@@ -103,16 +103,16 @@ const Product = () => {
             <div className="product__choose-color">
               <span>Choose Color</span>
               <div className="product__color-options">
-                <div className="circle color-1"></div>
-                <div className="circle color-2"></div>
-                <div className="circle color-3"></div>
-                <div className="circle color-4"></div>
+                <div className="product__color-circle--gray"></div>
+                <div className="product__color-circle--grayer"></div>
+                <div className="product__color-circle--the-grayest"></div>
+                <div className="product__color-circle--grayhole"></div>
               </div>
             </div>
             <span className="product__to-cart">Add to cart</span>
             <div className="product__checkout">
               <span>Checkout safety</span>
-              <div className="line"></div>
+              <div className="product__checkout-line"></div>
               <div className="product__payment-methods">
                 <img
                   src={paypal}
