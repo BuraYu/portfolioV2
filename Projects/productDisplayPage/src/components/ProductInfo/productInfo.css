@@ -1,3 +1,29 @@
-.product-info {
-  color: yellowgreen;
+.product-info__wrapper {
+  max-width: 70%;
+  padding: 20px;
+  margin: 0 auto;
+
+}
+
+.product-info__links ul {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px
+}
+
+.product-info__links ul a {
+  text-decoration: none;
+  color: #788896;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.product-info__wrapper p {
+  color: #788896;
+  font-weight: bold;
+}
+
+.product-info__links ul .active {
+  color: #6558f5;
+  border-bottom: 2px solid #6558f5;
 }
