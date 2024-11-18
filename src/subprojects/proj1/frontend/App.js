@@ -8,11 +8,14 @@ const Project1App = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:3001/api/data");
+      const response = await axios.get(
+        "https://node-js-api-git-main-buraks-projects-4eef02eb.vercel.app/?vercelToolbarCode=TDBo7hfyGRsPnAe"
+      );
       setData(response.data);
       setError(null);
     } catch (error) {
       setError("Failed to fetch data");
+      console.log(error);
     }
   };
 
