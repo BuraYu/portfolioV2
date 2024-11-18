@@ -10,7 +10,7 @@ const dummyData = {
   timestamp: new Date(),
 };
 
-app.get("/api/data", (req, res) => {
+app.get("", (req, res) => {
   res.status(200).json(dummyData);
 });
 
