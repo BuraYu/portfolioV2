@@ -19,3 +19,5 @@ app.listen(PORT, () => {
     `Project 1 backend running on https://node-js-comp-proj-whgc.vercel.app/${PORT}`
   );
 });
+
+module.exports = app;
