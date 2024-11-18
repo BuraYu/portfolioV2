@@ -11,7 +11,7 @@ const dummyData = {
 };
 
 app.get("/api/data", (req, res) => {
-  res.json(dummyData);
+  res.status(200).json(dummyData);
 });
 
 app.listen(PORT, () => {
