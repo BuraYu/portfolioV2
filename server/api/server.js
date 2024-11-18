@@ -15,5 +15,7 @@ app.get("/api/data", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Project 1 backend running on http://localhost:${PORT}`);
+  console.log(
+    `Project 1 backend running on https://node-js-comp-proj-whgc.vercel.app/${PORT}`
+  );
 });
