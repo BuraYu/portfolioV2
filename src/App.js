@@ -49,6 +49,26 @@ const App = () => {
       isExternal: true,
       externalUrl: "https://burayu.github.io/bento/",
     },
+    {
+      name: "Project 4",
+      url: "/project4",
+      title: "fylo",
+      description: "CyberSec company that stores files.",
+      component: null,
+      category: "frontend",
+      isExternal: true,
+      externalUrl: "https://burayu.github.io/fylo/",
+    },
+    {
+      name: "Project 5",
+      url: "/project5",
+      title: "AdviceAPI",
+      description: "Get your daily advice here.",
+      component: null,
+      category: "frontend",
+      isExternal: true,
+      externalUrl: "https://burayu.github.io/adviceAPI/",
+    },
   ];
 
   return (
