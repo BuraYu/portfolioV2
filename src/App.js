@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import Project1App from "./subprojects/proj1/frontend/App";
-import Project2App from "./subprojects/proj2/frontend/App";
 import "./App.css";
 
 const App = () => {
@@ -22,22 +20,14 @@ const App = () => {
     {
       name: "Project 1",
       url: "/project1",
-      title: "Link Shortener",
-      description: "Shortens any posted link",
-      component: Project1App,
+      title: "Shortly",
+      description: "LinkShortener",
+      component: null,
       category: "backend",
-      isExternal: false,
+      isExternal: true,
+      externalUrl: "https://link-shortener-sand.vercel.app/",
     },
-    {
-      name: "Project 2",
-      url: "/project2",
-      title: "E-Commerce Platform",
-      description:
-        "An online store for browsing and purchasing your favorite products.",
-      component: Project2App,
-      category: "backend",
-      isExternal: false,
-    },
+
     {
       name: "Project 3",
       url: "/project3",
