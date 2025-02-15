@@ -59,6 +59,16 @@ const App = () => {
       isExternal: true,
       externalUrl: "https://burayu.github.io/adviceAPI/",
     },
+    {
+      name: "Project 6",
+      url: "/project6",
+      title: "TechBook",
+      description: "Join the ultimate tech community.",
+      component: null,
+      category: "frontend",
+      isExternal: true,
+      externalUrl: "https://techbook-sigma.vercel.app/",
+    },
   ];
 
   return (
