@@ -91,7 +91,7 @@ body {
 .main-content {
   background-color: #fff;
   flex: 1;
-  overflow-y: auto;
+  overflow-y: hidden;
   box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
   margin-left: 280px;
   transition: margin-left 0.3s ease;
