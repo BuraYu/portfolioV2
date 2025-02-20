@@ -6,11 +6,23 @@ body {
   background-color: #f5f5f7;
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .App {
   display: flex;
   height: 100vh;
   overflow: hidden;
   position: relative;
+}
+
+.sidebar > a {
+  text-decoration: none;
+  color: #0071e3;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Sidebar Styling */
@@ -44,7 +56,7 @@ body {
 .accordion-button {
   background: none;
   border: none;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   color: #0071e3;
   text-align: left;
@@ -121,8 +133,21 @@ body {
 }
 
 .show-sidebar {
-  color: #333;
-  font-weight: 600;
-  text-transform: uppercase;
-  
+  position: fixed;
+  left: 0;
+  top: 86%;
+  transform: translateY(-50%);
+  background-color: #0071e3;
+  color: #ffffff;
+  padding: 0px 1px;
+  border-radius: 0 8px 8px 0;
+  writing-mode: vertical-rl;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.show-sidebar:hover {
+  background-color: #19518a;
 }
