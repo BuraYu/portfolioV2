@@ -159,7 +159,34 @@ const App = () => {
                   <h1>Burak</h1>
                 </div>
               </div>
-              <div class="div2 bento-box">2</div>
+              <div class="div2 bento-box">
+                <div className="chat-container">
+                  <div className="super-chat">
+                    <p>
+                      <span>BerlinDieter: </span>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Similique, sint obcaecati. Reprehenderit ipsa enim
+                      doloribus a facilis. Dolores, libero consectetur.
+                    </p>
+                  </div>
+                  <div className="super-chat">
+                    <p>
+                      <span>BerlinDieter: </span>
+                      ldfasdfasdfdf
+                    </p>
+                  </div>
+                  <div className="super-chat">
+                    <p>
+                      <span>BerlinDieter: </span>
+                      ldfasdfasdfdf
+                    </p>
+                  </div>
+                </div>
+                <div className="input-container">
+                  <input type="text" placeholder="Type a message..." />
+                  <button>Send</button>
+                </div>
+              </div>
               <div class="div3 bento-box">3</div>
               <div class="div4 bento-box">4</div>
               <div class="div5 bento-box">Fullstack dev based in Berlin</div>
