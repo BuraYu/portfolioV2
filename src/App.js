@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import "./App.css";
+import berlinBear from "./images/gave_me_the_looks_3.png";
 
 const App = () => {
   const [isBackendOpen, setIsBackendOpen] = useState(false);
@@ -187,10 +188,14 @@ const App = () => {
                   <button>Send</button>
                 </div>
               </div>
-              <div class="div3 bento-box">3</div>
+              <div class="div3 bento-box">Socials</div>
               <div class="div4 bento-box">4</div>
-              <div class="div5 bento-box">Fullstack dev based in Berlin</div>
-              <div class="div6 bento-box">6</div>
+              <div class="div5 bento-box">
+                <h2>Who am i.</h2>
+                <p>Fullstack Dev based in Berlin</p>
+                <img src={berlinBear} alt="Logo: Berlin Bear" />
+              </div>
+              <div class="div6 bento-box">Current Project</div>
               <div class="div7 bento-box">7</div>
             </div>
           </div>
