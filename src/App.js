@@ -118,7 +118,6 @@ const App = () => {
             )}
           </div>
         </div>
-
         {/* Main Content */}
         <div className={`main-content ${toggleSidebar ? "active" : "hidden"}`}>
           <Routes>
@@ -144,8 +143,31 @@ const App = () => {
               />
             ))}
           </Routes>
+          {/* Portfolio Page Content */}
+          <div className="main-content-wrapper">
+            <ul style={{ display: "flex" }}>
+              <li>Home</li>
+              <li>Contact</li>
+            </ul>
+            <div class="parent">
+              <div class="div1 bento-box">
+                <div className="my-name-is-wrapper">
+                  <h2>Hello</h2>
+                  <h3>my name is</h3>
+                </div>
+                <div className="name_container">
+                  <h1>Burak</h1>
+                </div>
+              </div>
+              <div class="div2 bento-box">2</div>
+              <div class="div3 bento-box">3</div>
+              <div class="div4 bento-box">4</div>
+              <div class="div5 bento-box">Fullstack dev based in Berlin</div>
+              <div class="div6 bento-box">6</div>
+              <div class="div7 bento-box">7</div>
+            </div>
+          </div>
         </div>
-
         {/* Sidebar Toggle Icon */}
         <button className="sidebar-toggle" onClick={toggleSidebarVisibility}>
           {toggleSidebar ? (
