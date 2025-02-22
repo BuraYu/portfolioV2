@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import "./App.css";
 import berlinBear from "./images/gave_me_the_looks_3.png";
+import { SocialIcon } from "react-social-icons";
+import techBook from "./images/techbook_screenshot.png";
 
 const App = () => {
   const [isBackendOpen, setIsBackendOpen] = useState(false);
@@ -188,15 +190,36 @@ const App = () => {
                   <button>Send</button>
                 </div>
               </div>
-              <div class="div3 bento-box">Socials</div>
-              <div class="div4 bento-box">4</div>
+              <div class="div3 bento-box">
+                <h2 className="bento-header">socials.</h2>
+                <div className="social-links-container">
+                  <SocialIcon
+                    className="custom-class"
+                    url="http://www.github.com/burayu"
+                  />
+                  <SocialIcon url="www.linkedin.com/burayu" />
+                  <SocialIcon url="www.xing.de/burayu" />
+                  <SocialIcon url="mailto:burak.yueksel@hotmail.com" />
+                </div>
+              </div>
+              <div class="div4 bento-box">
+                <h2 className="bento-header">random api data.</h2>
+              </div>
               <div class="div5 bento-box">
-                <h2>Who am i.</h2>
+                <h2 className="bento-header">Who am i.</h2>
                 <p>Fullstack Dev based in Berlin</p>
                 <img src={berlinBear} alt="Logo: Berlin Bear" />
               </div>
-              <div class="div6 bento-box">Current Project</div>
-              <div class="div7 bento-box">7</div>
+              <div class="div6 bento-box">
+                <h2 className="bento-header">current Project.</h2>
+                <div className="div6-content">
+                  <p>TechBook</p>
+                  <img src={techBook} alt="" />
+                </div>
+              </div>
+              <div class="div7 bento-box">
+                <h2 className="bento-header">techstack.</h2>
+              </div>
             </div>
           </div>
         </div>
