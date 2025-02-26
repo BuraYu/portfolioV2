@@ -6,6 +6,7 @@ import "./App.css";
 import berlinBear from "./images/gave_me_the_looks_3.png";
 import { SocialIcon } from "react-social-icons";
 import techBook from "./images/techbook_screenshot.png";
+import underConstruction from "./images/under_construction.svg";
 
 import reactIcon from "./icons/react-svgrepo-com.svg";
 import javascriptIcon from "./icons/javascript-svgrepo-com.svg";
@@ -187,6 +188,11 @@ const App = () => {
           </Routes>
           {/* Portfolio Page Content */}
           <div className="main-content-wrapper">
+            <img
+              src={underConstruction}
+              alt=""
+              className="under-construction"
+            />
             <div class="parent">
               <div class="div1 bento-box">
                 <div className="my-name-is-wrapper">
@@ -232,8 +238,8 @@ const App = () => {
                     className="custom-class"
                     url="http://www.github.com/burayu"
                   />
-                  <SocialIcon url="www.linkedin.com/burayu" />
-                  <SocialIcon url="www.xing.de/burayu" />
+                  <SocialIcon url="https://www.linkedin.com/in/buraky%C3%BCksel-/" />
+                  <SocialIcon url="http://www.xing.de/burayu" />
                   <SocialIcon url="mailto:burak.yueksel@hotmail.com" />
                 </div>
               </div>
@@ -293,10 +299,7 @@ const App = () => {
                         e.stopPropagation();
                         closeModal();
                       }}
-                    >
-                      <p>Test</p>
-                      <button>close</button>
-                    </div>
+                    ></div>
                   </Modal>
                   <p>TechBook</p>
                   <img src={techBook} alt="" />

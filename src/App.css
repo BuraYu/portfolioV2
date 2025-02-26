@@ -137,8 +137,15 @@ p {
   align-items: center;
   gap: 20px;
   padding: 20px;
+  position: relative;
 }
 
+.under-construction {
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  transform: rotate(315deg);
+}
 .parent {
   height: auto;
   display: grid;
