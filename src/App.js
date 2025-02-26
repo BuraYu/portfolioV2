@@ -5,6 +5,14 @@ import berlinBear from "./images/gave_me_the_looks_3.png";
 import { SocialIcon } from "react-social-icons";
 import techBook from "./images/techbook_screenshot.png";
 
+import reactIcon from "./icons/react-svgrepo-com.svg";
+import javascriptIcon from "./icons/javascript-svgrepo-com.svg";
+import typescriptIcon from "./icons/typescript-svgrepo-com.svg";
+import nodeIcon from "./icons/node-16-svgrepo-com.svg";
+import sassIcon from "./icons/sass-svgrepo-com.svg";
+import mongoIcon from "./icons/mongodb-svgrepo-com.svg";
+import nextJsIcon from "./icons/nextjs-fill-svgrepo-com.svg";
+
 const App = () => {
   const [isBackendOpen, setIsBackendOpen] = useState(false);
   const [isFrontendOpen, setIsFrontendOpen] = useState(false);
@@ -200,6 +208,37 @@ const App = () => {
               </div>
               <div class="div4 bento-box">
                 <h2 className="bento-header">techstack.</h2>
+
+                <div className="icon-container-wrapper">
+                  <div className="icon-container">
+                    <img src={reactIcon} alt="react icon" />
+                    <p>React</p>
+                  </div>
+                  <div className="icon-container">
+                    <img src={javascriptIcon} alt="react icon" />
+                    <p>JavaScript</p>
+                  </div>
+                  <div className="icon-container">
+                    <img src={typescriptIcon} alt="react icon" />
+                    <p>Typescript</p>
+                  </div>
+                  <div className="icon-container">
+                    <img src={nextJsIcon} alt="react icon" />
+                    <p>NextJS</p>
+                  </div>
+                  <div className="icon-container">
+                    <img src={mongoIcon} alt="react icon" />
+                    <p>MongoDB</p>
+                  </div>
+                  <div className="icon-container">
+                    <img src={sassIcon} alt="react icon" />
+                    <p>Sass/SCSS</p>
+                  </div>
+                  <div className="icon-container">
+                    <img src={nodeIcon} alt="react icon" />
+                    <p>NodeJS</p>
+                  </div>
+                </div>
               </div>
               <div class="div5 bento-box">
                 <h2 className="bento-header">Who am i.</h2>
