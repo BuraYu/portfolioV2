@@ -148,10 +148,6 @@ const App = () => {
           </Routes>
           {/* Portfolio Page Content */}
           <div className="main-content-wrapper">
-            <ul style={{ display: "flex" }}>
-              <li>Home</li>
-              <li>Contact</li>
-            </ul>
             <div class="parent">
               <div class="div1 bento-box">
                 <div className="my-name-is-wrapper">
@@ -203,22 +199,23 @@ const App = () => {
                 </div>
               </div>
               <div class="div4 bento-box">
-                <h2 className="bento-header">random api data.</h2>
+                <h2 className="bento-header">techstack.</h2>
               </div>
               <div class="div5 bento-box">
                 <h2 className="bento-header">Who am i.</h2>
                 <p>Fullstack Dev based in Berlin</p>
-                <img src={berlinBear} alt="Logo: Berlin Bear" />
+                {/* <img src={berlinBear} alt="Logo: Berlin Bear" /> */}
               </div>
               <div class="div6 bento-box">
                 <h2 className="bento-header">current Project.</h2>
                 <div className="div6-content">
                   <p>TechBook</p>
                   <img src={techBook} alt="" />
+                  <p>Click to learn more</p>
                 </div>
               </div>
               <div class="div7 bento-box">
-                <h2 className="bento-header">techstack.</h2>
+                <h2 className="bento-header">Add what her?</h2>
               </div>
             </div>
           </div>

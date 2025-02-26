@@ -133,14 +133,14 @@ p {
   background-color: #181818;
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 20px;
   padding: 20px;
 }
 
 .parent {
-  height: 100%;
+  height: auto;
   display: grid;
   grid-template-columns: repeat(3, 350px);
   grid-template-rows: 267px 190px 148px 240px;
@@ -347,6 +347,10 @@ p {
   flex-direction: column;
   align-items: center;
   margin-bottom: auto;
+}
+
+.div6-content p:first-child {
+  color: rgb(228, 228, 228);
 }
 
 .div6 img {
