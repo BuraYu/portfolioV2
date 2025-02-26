@@ -7,6 +7,7 @@ import berlinBear from "./images/gave_me_the_looks_3.png";
 import { SocialIcon } from "react-social-icons";
 import techBook from "./images/techbook_screenshot.png";
 import underConstruction from "./images/under_construction.svg";
+import glowingArrow from "./images/return.png";
 
 import reactIcon from "./icons/react-svgrepo-com.svg";
 import javascriptIcon from "./icons/javascript-svgrepo-com.svg";
@@ -193,6 +194,10 @@ const App = () => {
               alt=""
               className="under-construction"
             />
+            {toggleSidebar ? null : (
+              <img src={glowingArrow} alt="" className="arrow" />
+            )}
+
             <div class="parent">
               <div class="div1 bento-box">
                 <div className="my-name-is-wrapper">

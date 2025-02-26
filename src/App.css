@@ -146,6 +146,13 @@ p {
   bottom: 10%;
   transform: rotate(315deg);
 }
+
+.arrow {
+  position: absolute;
+  width: 200px;
+  left: 2%;
+  bottom: 2%; 
+}
 .parent {
   height: auto;
   display: grid;
