@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Modal from "react-modal";
+
 import "./App.css";
 import berlinBear from "./images/gave_me_the_looks_3.png";
 import { SocialIcon } from "react-social-icons";
@@ -13,10 +15,17 @@ import sassIcon from "./icons/sass-svgrepo-com.svg";
 import mongoIcon from "./icons/mongodb-svgrepo-com.svg";
 import nextJsIcon from "./icons/nextjs-fill-svgrepo-com.svg";
 
+Modal.setAppElement("#root");
+
 const App = () => {
   const [isBackendOpen, setIsBackendOpen] = useState(false);
   const [isFrontendOpen, setIsFrontendOpen] = useState(false);
   const [toggleSidebar, setToggleSidebar] = useState(true);
+  const [modalIsOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    console.log("Modal State:", modalIsOpen);
+  }, [modalIsOpen]);
 
   const toggleBackend = () => {
     setIsBackendOpen(!isBackendOpen);
@@ -25,6 +34,28 @@ const App = () => {
 
   const toggleSidebarVisibility = () => {
     setToggleSidebar(!toggleSidebar);
+  };
+  let subtitle;
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  function afterOpenModal() {}
+
+  function closeModal() {
+    console.log("Close button clicked");
+    setIsOpen(false);
+  }
+
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+    },
   };
 
   const projects = [
@@ -246,15 +277,34 @@ const App = () => {
                 {/* <img src={berlinBear} alt="Logo: Berlin Bear" /> */}
               </div>
               <div class="div6 bento-box">
-                <h2 className="bento-header">current Project.</h2>
-                <div className="div6-content">
+                <h2 className="bento-header">current project.</h2>
+                <div className="div6-content" onClick={openModal}>
+                  <Modal
+                    isOpen={modalIsOpen}
+                    onAfterOpen={afterOpenModal}
+                    onRequestClose={closeModal}
+                    style={customStyles}
+                    contentLabel="Example Modal"
+                    shouldCloseOnOverlayClick={true}
+                  >
+                    <div
+                      className="test"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        closeModal();
+                      }}
+                    >
+                      <p>Test</p>
+                      <button>close</button>
+                    </div>
+                  </Modal>
                   <p>TechBook</p>
                   <img src={techBook} alt="" />
                   <p>Click to learn more</p>
                 </div>
               </div>
               <div class="div7 bento-box">
-                <h2 className="bento-header">Add what her?</h2>
+                <h2 className="bento-header">Add what here?</h2>
               </div>
             </div>
           </div>
