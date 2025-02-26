@@ -22,7 +22,7 @@ Modal.setAppElement("#root");
 const App = () => {
   const [isBackendOpen, setIsBackendOpen] = useState(false);
   const [isFrontendOpen, setIsFrontendOpen] = useState(false);
-  const [toggleSidebar, setToggleSidebar] = useState(true);
+  const [toggleSidebar, setToggleSidebar] = useState(false);
   const [modalIsOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
