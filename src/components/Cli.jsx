@@ -5,9 +5,9 @@ import "./cli.css";
 const Cli = () => {
   const [data, setData] = useState([]);
   const about =
-    "Hi, I'm Burak! I spent five years leading a diverse team, honing my leadership, problem-solving, and communication skills. Eventually, I decided to pivot into coding, diving deep into web development and software engineering world. Now, I enjoy building, figuring out how things work and code.";
+    "I'm Burak, a former team leader turned web developer. After five years of managing a diverse team, I transitioned into coding, where I now enjoy building, problem-solving, and exploring the tech world.";
   const unknownCommand = "unknown command";
-  const socials = "My socials are directly above the terminal";
+  const socials = "You'll find my socials right above the terminal.";
   const help = "about | projects | clear | socials ";
   const projects =
     "There is an arrow pointing on button to open the sidebar. Feel free to click it to get an overview of my projects.";
