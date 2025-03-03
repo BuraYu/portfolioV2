@@ -142,8 +142,8 @@ p {
 
 .under-construction {
   position: absolute;
-  right: 10%;
-  bottom: 10%;
+  right: 2%;
+  bottom: 20%;
   transform: rotate(315deg);
 }
 

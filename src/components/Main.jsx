@@ -4,6 +4,7 @@ import Modal from "./Modal";
 import { SocialIcon } from "react-social-icons";
 import underConstruction from "../images/under_construction.svg";
 import glowingArrow from "../images/return.png";
+import Cli from "./Cli";
 
 import reactIcon from "../icons/react-svgrepo-com.svg";
 import javascriptIcon from "../icons/javascript-svgrepo-com.svg";
@@ -115,7 +116,8 @@ const Main = ({ toggleSidebar }) => {
           <Modal />
         </div>
         <div class="div7 bento-box">
-          <h2 className="bento-header">Add what here?</h2>
+          <h2 className="bento-header">about me.</h2>
+          <Cli />
         </div>
       </div>
     </div>
