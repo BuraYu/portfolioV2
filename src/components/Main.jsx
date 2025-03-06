@@ -108,7 +108,7 @@ const Main = ({ toggleSidebar }) => {
         </div>
         <div class="div5 bento-box">
           <h2 className="bento-header">Who am i.</h2>
-          <p>Fullstack Dev based in Berlin</p>
+          <p>Fullstack Dev based in Berlin with a background in management</p>
           {/* <img src={berlinBear} alt="Logo: Berlin Bear" /> */}
         </div>
         <div class="div6 bento-box">
