@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Modal from "react-modal";
 import techBook from "../images/techbook_screenshot.png";
+import techBookPreview from "../images//techbook_img.jpg";
 
 const ModalPreview = () => {
   const [modalIsOpen, setIsOpen] = useState(false);
@@ -42,12 +43,19 @@ const ModalPreview = () => {
         shouldCloseOnOverlayClick={true}
       >
         <div
-          className="test"
+          className="modal-container"
           onClick={(e) => {
             e.stopPropagation();
             closeModal();
           }}
-        ></div>
+        >
+          <div className="img-container">
+            <img src={techBookPreview} alt="Image of the techbook website" />
+          </div>
+          <div className="modal-description">
+            <p>test</p>
+          </div>
+        </div>
       </Modal>
       <p>TechBook</p>
       <img src={techBook} alt="" />

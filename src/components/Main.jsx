@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Modal from "./Modal";
 
 import { SocialIcon } from "react-social-icons";
@@ -15,15 +16,47 @@ import mongoIcon from "../icons/mongodb-svgrepo-com.svg";
 import nextJsIcon from "../icons/nextjs-fill-svgrepo-com.svg";
 
 const Main = ({ toggleSidebar }) => {
+  const slideVariants = {
+    left: { x: "-100vw", opacity: 0 },
+    right: { x: "100vw", opacity: 0 },
+    top: { y: "-100vh", opacity: 0 },
+    bottom: { y: "100vh", opacity: 0 },
+    visible: {
+      x: 0,
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
   return (
     <div className="main-content-wrapper">
-      <img src={underConstruction} alt="" className="under-construction" />
+      <motion.img
+        src={underConstruction}
+        alt=""
+        className="under-construction"
+        animate={{
+          x: 0,
+          y: 0,
+          opacity: 1,
+          transition: { duration: 2, ease: "easeOut" },
+        }}
+        initial={{ x: "100vh", opacity: 0 }}
+      />
       {toggleSidebar ? null : (
         <img src={glowingArrow} alt="" className="arrow" />
       )}
 
       <div class="parent">
-        <div class="div1 bento-box">
+        <motion.div
+          className="div1 bento-box"
+          animate={{
+            y: 0,
+            opacity: 1,
+            transition: { duration: 0.8, ease: "easeOut" },
+          }}
+          initial={{ y: "-100vh", opacity: 0 }}
+        >
           <div className="my-name-is-wrapper">
             <h2>Hello</h2>
             <h3>my name is</h3>
@@ -31,8 +64,16 @@ const Main = ({ toggleSidebar }) => {
           <div className="name_container">
             <h1>Burak</h1>
           </div>
-        </div>
-        <div class="div2 bento-box">
+        </motion.div>
+        <motion.div
+          class="div2 bento-box"
+          animate={{
+            x: 0,
+            opacity: 1,
+            transition: { duration: 0.8, ease: "easeOut" },
+          }}
+          initial={{ x: "100vh", opacity: 0 }}
+        >
           <div className="chat-container">
             <div className="super-chat">
               <p>
@@ -59,8 +100,16 @@ const Main = ({ toggleSidebar }) => {
             <input type="text" placeholder="Type a message..." />
             <button>Send</button>
           </div>
-        </div>
-        <div class="div3 bento-box">
+        </motion.div>
+        <motion.div
+          class="div3 bento-box"
+          animate={{
+            x: 0,
+            opacity: 1,
+            transition: { duration: 1, ease: "easeOut" },
+          }}
+          initial={{ x: "150vh", opacity: 0 }}
+        >
           <h2 className="bento-header">socials.</h2>
           <div className="social-links-container">
             <SocialIcon
@@ -71,8 +120,16 @@ const Main = ({ toggleSidebar }) => {
             <SocialIcon url="http://www.xing.de/burayu" />
             <SocialIcon url="mailto:burak.yueksel@hotmail.com" />
           </div>
-        </div>
-        <div class="div4 bento-box">
+        </motion.div>
+        <motion.div
+          class="div4 bento-box"
+          animate={{
+            x: 0,
+            opacity: 1,
+            transition: { duration: 3, ease: "easeOut" },
+          }}
+          initial={{ x: "0", opacity: 0 }}
+        >
           <h2 className="bento-header">techstack.</h2>
 
           <div className="icon-container-wrapper">
@@ -105,20 +162,44 @@ const Main = ({ toggleSidebar }) => {
               <p>NodeJS</p>
             </div>
           </div>
-        </div>
-        <div class="div5 bento-box">
+        </motion.div>
+        <motion.div
+          class="div5 bento-box"
+          animate={{
+            x: 0,
+            opacity: 1,
+            transition: { duration: 1, ease: "easeOut" },
+          }}
+          initial={{ x: "-150vh", opacity: 0 }}
+        >
           <h2 className="bento-header">Who am i.</h2>
           <p>Fullstack Dev based in Berlin with a background in management</p>
           {/* <img src={berlinBear} alt="Logo: Berlin Bear" /> */}
-        </div>
-        <div class="div6 bento-box">
+        </motion.div>
+        <motion.div
+          class="div6 bento-box"
+          animate={{
+            y: 0,
+            opacity: 1,
+            transition: { duration: 1, ease: "easeOut" },
+          }}
+          initial={{ y: "150vh", opacity: 0 }}
+        >
           <h2 className="bento-header">current project.</h2>
           <Modal />
-        </div>
-        <div class="div7 bento-box">
+        </motion.div>
+        <motion.div
+          class="div7 bento-box"
+          animate={{
+            y: 0,
+            opacity: 1,
+            transition: { duration: 1, ease: "easeOut" },
+          }}
+          initial={{ y: "150vh", opacity: 0 }}
+        >
           <h2 className="bento-header">about me.</h2>
           <Cli />
-        </div>
+        </motion.div>
       </div>
     </div>
   );

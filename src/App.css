@@ -143,7 +143,7 @@ p {
 .under-construction {
   position: absolute;
   right: 2%;
-  bottom: 20%;
+  bottom: 10%;
   transform: rotate(315deg);
 }
 
@@ -356,7 +356,7 @@ p {
 
 .div5 {
   grid-area: 2 / 1 / 3 / 2;
-  background-color: #e39b00;
+  background-color: #ffae00;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -366,6 +366,7 @@ p {
 .div5 p {
   font-family: "poppins", sans-serif;
   color: #fff;
+  /* text-shadow: 1px 1px 2px rgb(107, 107, 107); */
   font-weight: 700;
   padding: 10px;
   font-size: 1.5rem;
@@ -405,6 +406,24 @@ p {
   border-radius: 10px;
 }
 
+.modal-container {
+  max-width: 1200px;
+  height: 700px;
+  display: flex;
+}
+
+.img-container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.img-container img {
+  max-width: 100%;
+}
+
+.modal-description {
+  width: 45%;
+}
 .div7 {
   grid-area: 4 / 2 / 5 / 4;
   background-color: #ce20d4;
