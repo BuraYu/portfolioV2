@@ -406,24 +406,6 @@ p {
   border-radius: 10px;
 }
 
-.modal-container {
-  max-width: 1200px;
-  height: 700px;
-  display: flex;
-}
-
-.img-container {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-.img-container img {
-  max-width: 100%;
-}
-
-.modal-description {
-  width: 45%;
-}
 .div7 {
   grid-area: 4 / 2 / 5 / 4;
   background-color: #ce20d4;
