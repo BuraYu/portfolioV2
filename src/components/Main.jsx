@@ -35,13 +35,13 @@ const Main = ({ toggleSidebar }) => {
         src={underConstruction}
         alt=""
         className="under-construction"
+        initial={{ x: "100vh", opacity: 0, rotate: 0 }}
         animate={{
           x: 0,
-          y: 0,
           opacity: 1,
+          rotate: 35,
           transition: { duration: 2, ease: "easeOut" },
         }}
-        initial={{ x: "100vh", opacity: 0 }}
       />
       {toggleSidebar ? null : (
         <img src={glowingArrow} alt="" className="arrow" />
