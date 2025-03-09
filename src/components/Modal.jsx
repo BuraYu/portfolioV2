@@ -59,24 +59,35 @@ const ModalPreview = () => {
               TechBook is a platform for sharing and discovering tech-related
               articles and projects.
             </p>
-            <p className="tech-stack">
-              <strong>Tech Stack:</strong> React, NodeJS, MongoDB
-            </p>
+            <div className="tech-stack-container">
+              <p className="tech-stack">
+                Tech stack
+                <div className="badges">
+                  <span className="badges-frontend">React</span>
+                  <span className="badges-backend">NodeJS</span>
+                  <span className="badges-backend">MongoDB</span>
+                </div>
+              </p>
+            </div>
             <div className="modal-links">
-              <a
-                href="https://github.com/BuraYu/techbook"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                🔗 GitHub Repository
-              </a>
-              <a
-                href="http://techbook-sigma.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                🌍 Visit Website
-              </a>
+              <li>
+                <a
+                  href="https://github.com/BuraYu/techbook"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub Repository
+                </a>
+              </li>
+              <li>
+                <a
+                  href="http://techbook-sigma.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Visit Website
+                </a>
+              </li>
             </div>
             <button className="close-button" onClick={closeModal}>
               Close
