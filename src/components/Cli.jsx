@@ -93,8 +93,15 @@ const Cli = () => {
           return <p>{ele}</p>;
         })}
       </div>
-      <label>></label>
-      <input ref={inputRef} size={70} maxLength={70} onKeyDown={handleEnter} />
+      <div className="input-wrapper">
+        <label>></label>
+        <input
+          ref={inputRef}
+          size={70}
+          maxLength={70}
+          onKeyDown={handleEnter}
+        />
+      </div>
     </div>
   );
 };

@@ -29,8 +29,6 @@ const Main = ({ toggleSidebar }) => {
 
   return (
     <div className="main-content-wrapper">
-
-
       <div className="parent">
         <motion.div
           className="div1 bento-box"
@@ -156,7 +154,7 @@ const Main = ({ toggleSidebar }) => {
           }}
           initial={{ x: "-150vh", opacity: 0 }}
         >
-          <h2 className="bento-header">Who am i.</h2>
+          <h2 className="bento-header">who am i.</h2>
           <p>Fullstack Dev based in Berlin with a background in management</p>
         </motion.div>
         <motion.div
