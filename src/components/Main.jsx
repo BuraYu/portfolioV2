@@ -3,8 +3,6 @@ import { motion } from "framer-motion";
 import Modal from "./Modal";
 
 import { SocialIcon } from "react-social-icons";
-import underConstruction from "../images/under_construction.svg";
-import glowingArrow from "../images/return.png";
 import Cli from "./Cli";
 
 import reactIcon from "../icons/react-svgrepo-com.svg";
@@ -31,21 +29,7 @@ const Main = ({ toggleSidebar }) => {
 
   return (
     <div className="main-content-wrapper">
-      <motion.img
-        src={underConstruction}
-        alt=""
-        className="under-construction"
-        initial={{ x: "100vh", opacity: 0, rotate: 0 }}
-        animate={{
-          x: 0,
-          opacity: 1,
-          rotate: 35,
-          transition: { duration: 2, ease: "easeOut" },
-        }}
-      />
-      {toggleSidebar ? null : (
-        <img src={glowingArrow} alt="" className="arrow" />
-      )}
+
 
       <div className="parent">
         <motion.div
