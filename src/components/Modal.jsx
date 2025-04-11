@@ -1,4 +1,5 @@
 import React from "react";
+import Slider from "react-slick";
 import { useState } from "react";
 import "./modal.css";
 import Modal from "react-modal";
@@ -29,6 +30,13 @@ const ModalPreview = () => {
       marginRight: "-50%",
       transform: "translate(-50%, -50%)",
     },
+  };
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
   };
 
   Modal.setAppElement("#root");

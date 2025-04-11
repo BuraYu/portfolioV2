@@ -47,7 +47,7 @@ const Main = ({ toggleSidebar }) => {
         <img src={glowingArrow} alt="" className="arrow" />
       )}
 
-      <div class="parent">
+      <div className="parent">
         <motion.div
           className="div1 bento-box"
           animate={{
@@ -174,7 +174,6 @@ const Main = ({ toggleSidebar }) => {
         >
           <h2 className="bento-header">Who am i.</h2>
           <p>Fullstack Dev based in Berlin with a background in management</p>
-          {/* <img src={berlinBear} alt="Logo: Berlin Bear" /> */}
         </motion.div>
         <motion.div
           class="div6 bento-box"
