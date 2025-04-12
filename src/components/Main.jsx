@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Modal from "./Modal";
 
@@ -14,6 +14,44 @@ import mongoIcon from "../icons/mongodb-svgrepo-com.svg";
 import nextJsIcon from "../icons/nextjs-fill-svgrepo-com.svg";
 
 const Main = ({ toggleSidebar }) => {
+  const [messages, setMessages] = useState([]);
+  const [newMessage, setNewMessage] = useState("");
+
+  useEffect(() => {
+    const fetchMessages = async () => {
+      try {
+        const response = await fetch("http://localhost:5000/api/messages");
+        const data = await response.json();
+        setMessages(data);
+      } catch (error) {
+        console.error("Error fetching messages:", error);
+      }
+    };
+
+    fetchMessages();
+  }, [messages]);
+
+  const sendMessage = async () => {
+    if (!newMessage.trim()) return;
+
+    try {
+      const response = await fetch("http://localhost:5000/api/messages", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username: "BerlinDieter", message: newMessage }),
+      });
+
+      if (response.ok) {
+        const savedMessage = await response.json();
+        setMessages((prevMessages) => [savedMessage, ...prevMessages]);
+        setNewMessage("");
+      } else {
+        console.error("Failed to send message");
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+    }
+  };
   const slideVariants = {
     left: { x: "-100vw", opacity: 0 },
     right: { x: "100vw", opacity: 0 },
@@ -48,7 +86,7 @@ const Main = ({ toggleSidebar }) => {
           </div>
         </motion.div>
         <motion.div
-          class="div2 bento-box"
+          className="div2 bento-box"
           animate={{
             x: 0,
             opacity: 1,
@@ -57,30 +95,26 @@ const Main = ({ toggleSidebar }) => {
           initial={{ x: "100vh", opacity: 0 }}
         >
           <div className="chat-container">
-            <div className="super-chat">
-              <p>
-                <span>BerlinDieter: </span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Similique, sint obcaecati. Reprehenderit ipsa enim doloribus a
-                facilis. Dolores, libero consectetur.
-              </p>
-            </div>
-            <div className="super-chat">
-              <p>
-                <span>BerlinDieter: </span>
-                ldfasdfasdfdf
-              </p>
-            </div>
-            <div className="super-chat">
-              <p>
-                <span>BerlinDieter: </span>
-                ldfasdfasdfdf
-              </p>
-            </div>
+            {messages
+              .slice()
+              .reverse()
+              .map((msg, index) => (
+                <div className="super-chat" key={index}>
+                  <p>
+                    <span>{msg.username}: </span>
+                    {msg.message}
+                  </p>
+                </div>
+              ))}
           </div>
           <div className="input-container">
-            <input type="text" placeholder="Type a message..." />
-            <button>Send</button>
+            <input
+              type="text"
+              placeholder="Type a message..."
+              value={newMessage}
+              onChange={(e) => setNewMessage(e.target.value)}
+            />
+            <button onClick={sendMessage}>Send</button>
           </div>
         </motion.div>
         <motion.div

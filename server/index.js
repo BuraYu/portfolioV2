@@ -36,7 +36,7 @@ app.post("/api/messages", async (req, res) => {
   try {
     const newMessage = new Chat({ username, message });
     await newMessage.save();
-    res.status(201).json({ success: true, message: "Message saved!" });
+    res.status(201).json({ success: true, message: message });
   } catch (error) {
     res.status(500).json({ success: false, error: "Failed to save message" });
   }
