@@ -44,8 +44,7 @@ app.get("/api/messages", async (req, res) => {
   }
 });
 
-const { createServer } = require("http");
-module.exports = (req, res) => {
-  const server = createServer(app);
-  server.emit("request", req, res);
-};
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
