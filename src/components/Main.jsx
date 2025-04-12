@@ -113,6 +113,11 @@ const Main = ({ toggleSidebar }) => {
               placeholder="Type a message..."
               value={newMessage}
               onChange={(e) => setNewMessage(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  sendMessage();
+                }
+              }}
             />
             <button onClick={sendMessage}>Send</button>
           </div>
@@ -150,10 +155,7 @@ const Main = ({ toggleSidebar }) => {
 
           <div className="icon-container-wrapper">
             <div className="icon-container">
-              <img
-                src={reactIcon}
-                alt="react icon"
-              />
+              <img src={reactIcon} alt="react icon" />
               <p>React</p>
             </div>
             <div className="icon-container">
@@ -161,10 +163,7 @@ const Main = ({ toggleSidebar }) => {
               <p>JavaScript</p>
             </div>
             <div className="icon-container">
-              <img
-                src={typescriptIcon}
-                alt="react icon"
-              />
+              <img src={typescriptIcon} alt="react icon" />
               <p>Typescript</p>
             </div>
             <div className="icon-container">
