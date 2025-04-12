@@ -15,12 +15,6 @@ mongoose
   .then(() => console.log("Connected to MongoDB Atlas"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
-const PORT = 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
-
-console.log("MongoDB URI:", process.env.MONGO_URI);
 
 const chatSchema = new mongoose.Schema({
   username: { type: String, required: true },
@@ -50,3 +44,6 @@ app.get("/api/messages", async (req, res) => {
     res.status(500).json({ success: false, error: "Failed to fetch messages" });
   }
 });
+
+const { createServer } = require("http");
+module.exports = createServer(app);
