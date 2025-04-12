@@ -1,5 +1,4 @@
 import React from "react";
-import Slider from "react-slick";
 import { useState } from "react";
 import "./modal.css";
 import Modal from "react-modal";
@@ -55,7 +54,6 @@ const ModalPreview = () => {
           className="modal-container"
           onClick={(e) => {
             e.stopPropagation();
-            closeModal();
           }}
         >
           <div className="img-container">

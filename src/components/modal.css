@@ -24,6 +24,7 @@
 .modal-title {
   font-size: 24px;
   font-weight: bold;
+  font-family: "Roboto", sans-serif;
   color: #333;
   margin-bottom: 10px;
 }
@@ -123,4 +124,18 @@ li:nth-child(3) a:focus::after {
 
 .close-button:hover {
   background: #e60000;
+}
+
+@media (max-width: 768px) {
+  .modal-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .modal-description {
+    width: 100%;
+    border: 1px solid rgba(116, 121, 21, 0.6);
+    margin-bottom: 10px;
+  }
 }
