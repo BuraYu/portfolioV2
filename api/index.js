@@ -15,7 +15,6 @@ mongoose
   .then(() => console.log("Connected to MongoDB Atlas"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
-
 const chatSchema = new mongoose.Schema({
   username: { type: String, required: true },
   message: { type: String, required: true },
@@ -46,4 +45,7 @@ app.get("/api/messages", async (req, res) => {
 });
 
 const { createServer } = require("http");
-module.exports = createServer(app);
+module.exports = (req, res) => {
+  const server = createServer(app);
+  server.emit("request", req, res);
+};
