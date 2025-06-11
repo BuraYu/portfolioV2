@@ -13,7 +13,7 @@ import sassIcon from "../icons/sass-svgrepo-com.svg";
 import mongoIcon from "../icons/mongodb-svgrepo-com.svg";
 import nextJsIcon from "../icons/nextjs-fill-svgrepo-com.svg";
 
-const Main = ({ toggleSidebar }) => {
+const Main = () => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState("");
 
